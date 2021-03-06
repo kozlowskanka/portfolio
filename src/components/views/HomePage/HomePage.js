@@ -1,34 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './HomePage.module.scss';
 
-const Component = ({ children}) => (
+import { Hero } from '../../layout/Hero/Hero';
+import { personalData } from '../../../data/dataStore.js';
+
+const Component = () => (
   <div className={styles.component}>
-    <h2>HomePage</h2>
-    {children}
+    <Hero name = {personalData.name}/>
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
+
 };
-
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   Component as HomePage,
-  // Container as HomePage,
   Component as HomePageComponent,
 };
+

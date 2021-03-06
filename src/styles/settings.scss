@@ -1,1 +1,13 @@
 $base-size: 18px;
+
+$font-header: 'Didact Gothic', sans-serif;
+$font-text: 'Didact Gothic', sans-serif;
+
+$primary-color:#000;
+$secondary-color:#dfe6e9;
+
+@mixin flex($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

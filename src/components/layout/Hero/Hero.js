@@ -1,34 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Hero.module.scss';
 
-const Component = ({ children}) => (
+const Component = (props) => (
   <div className={styles.component}>
-    <h2>Hero</h2>
-    {children}
+    <Link to='/projects'>
+      <h2>{props.name}</h2>
+    </Link>
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
+  name: PropTypes.string,
 };
-
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   Component as Hero,
-  // Container as Hero,
   Component as HeroComponent,
 };

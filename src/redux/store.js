@@ -1,13 +1,11 @@
 import {combineReducers, createStore} from 'redux';
-import initialStoreData from './dataStore';
+import { reducer as projectsReducer } from './projectsRedux';
 
-// define initial state and shallow-merge initial data
-const initialState = {
-  projects: initialStoreData.lists,
-};
+import { initialState } from './initialState';
 
 // define reducers
 const reducers = {
+  projects: projectsReducer,
 };
 
 // add blank reducers for initial state properties without reducers
