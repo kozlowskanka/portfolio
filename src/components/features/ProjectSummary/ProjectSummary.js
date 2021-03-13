@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// import myImg from '../../../data/images/01.JPG';
+
 // import { connect } from 'react-redux';
 // import { getProjects } from '../../../redux/projectsRedux.js';
 
@@ -11,23 +13,25 @@ import styles from './ProjectSummary.module.scss';
 class Component extends React.Component {
 
   render () {
-    const { color, number, name } = this.props;
+    const { category, description, about, image } = this.props;
+
+    // const myImg = image;
+    // console.log('myImg', myImg);
 
     return (
-      <Col align="center" xs={12} lg={2} md={3} className={styles.component}>
+      <Col align="center" xs={12} lg={4} md={6} className={styles.component}>
         <div className ={styles.product}>
           <article>
-            <div
-              className={styles.color}
-              style={{
-                backgroundColor: color,
-              }}>
-            </div>
             <div className={styles.features}>
-              <h4 className={styles.name}>Pantone<sup>&reg;</sup></h4>
-              <h4 className={styles.number}> {number}</h4>
-              <p className={styles.description}>{name} <br/>
-              </p>
+              <div className={styles.imgContainer}>
+                <img 
+                  className={styles.image} 
+                  src={image}>
+                </img>
+                <div className={styles.overlay}>{about}</div>
+              </div>
+              <h4 className={styles.category}> {category}</h4>
+              <p className={styles.description}> {description}</p>
             </div>
           </article>
         </div>
@@ -38,9 +42,10 @@ class Component extends React.Component {
 
 Component.propTypes = {
   id: PropTypes.string,
-  color: PropTypes.string,
-  number: PropTypes.string,
-  name: PropTypes.string,
+  category: PropTypes.string,
+  description: PropTypes.string,
+  about: PropTypes.string,
+  image: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({

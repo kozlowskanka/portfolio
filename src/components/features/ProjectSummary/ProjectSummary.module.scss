@@ -1,4 +1,48 @@
 @import '../../../styles/settings.scss';
 
-// .component {
-// }
+.component {
+    // background-color: yellow;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 40px;
+
+    .imgContainer {
+        position: relative;
+        border-radius: $basic-radius;
+    }
+
+    .image {
+        border-radius: $basic-radius;
+
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .overlay {
+        border-radius: $basic-radius;
+        background-color: $primary-color;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include flex (center, center);
+        color: $secondary-color;
+    }
+
+    .overlay:hover {
+        transition: 0.5s;
+        opacity: 0.7;
+    }
+
+    .category {
+        margin: 0;
+        
+    }
+
+    .description {
+        margin-top: 5px;
+    }
+}

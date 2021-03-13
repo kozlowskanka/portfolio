@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { getProjects } from '../../../redux/projectsRedux.js';
 
 import { ProjectSummary } from '../../features/ProjectSummary/ProjectSummary';
+import { SectionTitle } from '../../common/SectionTitle/SectionTitle';
 
 import styles from './Projects.module.scss';
 
@@ -17,14 +18,17 @@ class Component extends React.Component {
     return (
       <div className={styles.component}>
         <Grid>
+          <SectionTitle 
+            title = {'Projects'}/>
           <Row
             align ='center'>
             {projects.map(project => (
               <ProjectSummary
                 key = {project.id}
-                color = {project.color}
-                number ={project.number}
-                name ={project.name}
+                category = {project.category}
+                description = {project.description}
+                about = {project.about}
+                image ={project.image}
               />
             ))}
           </Row>
