@@ -5,7 +5,7 @@ import styles from './SectionTitle.module.scss';
 
 const Component = (props) => (
   <div className={styles.component}>
-    <h2>{props.title}</h2>
+    <h1>{props.title}</h1>
   </div>
 );
 

@@ -1,0 +1,37 @@
+@import '../../../styles/settings.scss';
+
+.component {
+    width: 100%;
+    padding: 15px;
+    // background-color: $secondary-color;
+    border-top: solid 0.3px $secondary-color;
+    color: $primary-color;
+    margin: 0;
+    @include flex (center, center);
+
+    p {
+        margin: 0px 30px;
+        .bold {
+        // background-color: yellow;
+        font-weight: bold;
+        }
+    }
+
+    a {
+        color: $complementary-color;
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .component {
+        flex-direction: column;
+
+
+        p {
+            // background-color:yellow;
+            margin: 5px 0;
+        }
+    }
+  }

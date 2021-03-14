@@ -7,7 +7,7 @@ import styles from './Hero.module.scss';
 const Component = (props) => (
   <div className={styles.component}>
     <Link to='/projects'>
-      <h2>{props.name}</h2>
+      <h1>{props.name}</h1>
     </Link>
   </div>
 );

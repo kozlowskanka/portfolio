@@ -7,8 +7,11 @@ import { getProjects } from '../../../redux/projectsRedux.js';
 
 import { ProjectSummary } from '../../features/ProjectSummary/ProjectSummary';
 import { SectionTitle } from '../../common/SectionTitle/SectionTitle';
+import { Footer } from '../../layout/Footer/Footer';
 
 import styles from './Projects.module.scss';
+
+import { personalData } from '../../../data/dataStore.js';
 
 class Component extends React.Component {
 
@@ -33,6 +36,10 @@ class Component extends React.Component {
             ))}
           </Row>
         </Grid>
+        <Footer 
+          phone={personalData.phone}
+          mail={personalData.mail}>
+        </Footer>
       </div>
     );
   }

@@ -1,11 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import myImg from '../../../data/images/01.JPG';
-
-// import { connect } from 'react-redux';
-// import { getProjects } from '../../../redux/projectsRedux.js';
-
 import { Col } from 'react-flexbox-grid';
 
 import styles from './ProjectSummary.module.scss';
@@ -14,9 +9,6 @@ class Component extends React.Component {
 
   render () {
     const { category, description, about, image } = this.props;
-
-    // const myImg = image;
-    // console.log('myImg', myImg);
 
     return (
       <Col align="center" xs={12} lg={4} md={6} className={styles.component}>
@@ -28,7 +20,9 @@ class Component extends React.Component {
                   className={styles.image} 
                   src={image}>
                 </img>
-                <div className={styles.overlay}>{about}</div>
+                <div className={styles.overlay}>
+                  <p>{about}</p>
+                </div>
               </div>
               <h4 className={styles.category}> {category}</h4>
               <p className={styles.description}> {description}</p>
@@ -48,14 +42,7 @@ Component.propTypes = {
   image: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   projects: getProjects(state),
-// });
-
-// const Container = connect(mapStateToProps)(Component);
-
 export {
   Component as ProjectSummary,
-  // Container as ProjectSummary,
   Component as ProjectSummaryComponent,
 };

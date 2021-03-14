@@ -1,12 +1,14 @@
-$base-size: 14px;
+$base-size: 10px;
 
 $basic-radius: 6px;
 
-$font-header: 'Lexend Deca', sans-serif;
-$font-text: 'Lexend Deca', sans-serif;
+$font-header: 'Roboto', sans-serif;
+$font-text: 'Roboto', sans-serif;
 
 $primary-color:#000;
 $secondary-color:#dfe6e9;
+$complementary-color: #636e72;
+$light-color:#fff;
 
 @mixin flex($align-items, $justify-content) {
   display: flex;
