@@ -8,18 +8,21 @@ import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Projects } from './components/views/Projects/Projects';
 import { HomePage } from './components/views/HomePage/HomePage';
 import { About } from './components/views/About/About';
+import ScrollToTop from './components/common/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <MainLayout>
-          <Switch>
-            <Route exact path='/' component={HomePage} />
-            <Route exact path='/projects' component={Projects} />
-            <Route exact path='/about' component={About} />
-          </Switch>
-        </MainLayout>
+        <ScrollToTop>
+          <MainLayout>
+            <Switch>
+              <Route exact path='/' component={HomePage} />
+              <Route exact path='/projects' component={Projects} />
+              <Route exact path='/about' component={About} />
+            </Switch>
+          </MainLayout>
+        </ScrollToTop>
       </BrowserRouter>
     </Provider>
   );
