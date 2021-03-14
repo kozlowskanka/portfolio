@@ -24,7 +24,7 @@ class Component extends React.Component {
                   <p>{about}</p>
                 </div>
               </div>
-              <h4 className={styles.category}> {category}</h4>
+              <h6 className={styles.category}> {category}</h6>
               <p className={styles.description}> {description}</p>
             </div>
           </article>

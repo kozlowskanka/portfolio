@@ -1,22 +1,20 @@
 @import '../../../styles/settings.scss';
 
 .component {
-    // background-color: yellow;
     padding: 20px;
     text-align: left;
     margin-bottom: 40px;
 
     .imgContainer {
         position: relative;
-        border-radius: $basic-radius;
     }
 
     .image {
-        border-radius: $basic-radius;
         display: block;
         width: 100%;
         height: auto;
         margin-bottom: 10px;
+        border-radius: $basic-radius;
     }
 
     .overlay {
@@ -27,8 +25,9 @@
         top: 0;
         width: 100%;
         height: 100%;
-        @include flex (center, center);
+        @include flex (center, left);
         color: $primary-color;
+        padding-right: 20px;
     }
 
     .overlay:hover {

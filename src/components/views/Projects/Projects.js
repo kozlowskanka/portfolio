@@ -11,6 +11,7 @@ import { Footer } from '../../layout/Footer/Footer';
 
 import styles from './Projects.module.scss';
 
+import { Link } from 'react-router-dom';
 import { personalData } from '../../../data/dataStore.js';
 
 class Component extends React.Component {
@@ -21,8 +22,10 @@ class Component extends React.Component {
     return (
       <div className={styles.component}>
         <Grid>
-          <SectionTitle 
-            title = {'Projects'}/>
+          <Link to='/about'>
+            <SectionTitle 
+              title = {'Projects'}/>
+          </Link>
           <Row
             align ='center'>
             {projects.map(project => (
@@ -36,7 +39,8 @@ class Component extends React.Component {
             ))}
           </Row>
         </Grid>
-        <Footer 
+        <Footer
+          name={personalData.name}
           phone={personalData.phone}
           mail={personalData.mail}>
         </Footer>

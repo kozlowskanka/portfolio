@@ -3,7 +3,6 @@
 .component {
     width: 100%;
     padding: 15px;
-    // background-color: $secondary-color;
     border-top: solid 0.3px $secondary-color;
     color: $primary-color;
     margin: 0;
@@ -15,11 +14,6 @@
         // background-color: yellow;
         font-weight: bold;
         }
-    }
-
-    a {
-        color: $complementary-color;
-        text-decoration: none;
     }
 }
 

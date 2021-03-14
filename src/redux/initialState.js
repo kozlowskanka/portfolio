@@ -5,7 +5,7 @@ export const initialState = {
         id: '1',
         category: 'UX, UI, coding',
         description: 'description-1',
-        about: 'xxxx',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
         image: '/images/layouts.jpg',
       },
       {
