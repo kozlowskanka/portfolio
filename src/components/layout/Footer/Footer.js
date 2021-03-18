@@ -16,7 +16,11 @@ const Component = (props) => (
     </p>
     <p>
       <span className ={styles.bold}>Mail: </span>
-      <a href="mailto:webmaster@example.com">{props.mail}</a>
+      <a href={props.mail}>{props.mail}</a>
+    </p>
+    <p>
+      <span className ={styles.bold}>Github: </span>
+      <a href="https://github.com/kozlowskanka" target="_blank">Show GitHub</a>
     </p>
   </div>
 );
@@ -25,6 +29,7 @@ Component.propTypes = {
   name: PropTypes.string,
   phone: PropTypes.string,
   mail: PropTypes.string,
+  portfolio: PropTypes.string,
 };
 
 export {

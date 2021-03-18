@@ -42,7 +42,8 @@ class Component extends React.Component {
         <Footer
           name={personalData.name}
           phone={personalData.phone}
-          mail={personalData.mail}>
+          mail={personalData.mail}
+          portfolio={personalData.portfolio}>
         </Footer>
       </div>
     );

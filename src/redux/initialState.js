@@ -131,7 +131,7 @@ export const initialState = {
         id: '18',
         category: 'Young Media Lions Competition',
         description: 'Strategy, Photoshop, Illustrator',
-        about: 'Promotion of the day without complaining was one of the stages of the national competition called Young Media Lions. Out of 38 two-person teams, we turned out to be the best in Poland. This victory let us represent our country on the international level and participate in jubilee 60th Cannes Lions Festival of Creativity. Seven-day adventure in France proved to me how crucial is cooperation of various industries. Since then I am fascinated with joining art with technology.',
+        about: 'Strategy for promoting the day without complaining was one of the stages of the national competition called Young Media Lions. Out of 38 two-person teams, we turned out to be the best in Poland. This victory let us represent our country on the international level and participate in jubilee 60th Cannes Lions Festival of Creativity. Seven-day adventure in France proved to me how crucial is cooperation of various industries. Since then I am fascinated with joining art with technology.',
         image: '/images/yml.jpg',
       },
       // {
